@@ -7,7 +7,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 export const getRecipes = async (healthInfo) => {
   try {
     const genAI = new GoogleGenerativeAI(
-        "AIzaSyBUet0VPmgentGxT8SONuGO06ewh9rszbY");
+      REACT_APP_GEMINI_API_KEY);
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash",
   // Set the `responseMimeType` to output JSON
   generationConfig: { responseMimeType: "application/json" } });
